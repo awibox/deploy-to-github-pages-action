@@ -45,7 +45,7 @@ jobs:
 |`AUTHOR`|Required|Name of the repository owner|awibox|
 |`BUILD_PATH`|Required|The directory where the static is built| public
 |`GITHUB_PAGE_NAME`|Required|Name of the repository for GitHub Pages where the application will be collected|awibox.github.io|
-|`PA_TOKEN`|Required|GitHub Private Access Token with editing rights for repo. You can create it using [GitHub Documentation](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)|${{ secrets.PA_TOKEN }}|
+|`PA_TOKEN`|Required|GitHub Private Access Token with editing rights for repo. You can create it using [GitHub Documentation](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)|${{secrets.PA_TOKEN}}|
 |`USERNAME`|Optional|The GitHub username for commits.|awibox|
 |`EMAIL`|Optional|The email that is used for commits.|andrei@awb.pw|
 
