@@ -1,6 +1,8 @@
 # action.yml
 name: 'Deploy your app to GitHub Pages'
 description: 'Deployment build files to your main repository for Github Pages'
+icon: 'upload'
+color: 'blue'
 inputs:
   AUTHOR:  # id of input
     description: 'Author'
