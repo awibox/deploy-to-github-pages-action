@@ -8,8 +8,15 @@ if [[ -z "$BUILD_PATH" ]]; then
 fi
 
 if [[ -e $BUILD_PATH ]]; then
+  echo "$BUILD_PATH was found"
+else
   echo "$BUILD_PATH not founded. You should run build"
-  exit 1
+fi
+
+if [[ -e '$BUILD_PATH' ]]; then
+  echo "BUILD_PATH was found"
+else
+  echo "BUILD_PATH not founded. You should run build"
 fi
 
 if [[ -z "$AUTHOR" ]]; then
