@@ -1,17 +1,18 @@
 # action.yml
 name: 'Deploy your app to GitHub Pages'
-description: 'Deployment build files to your main repository for Github Pages'
-icon: 'upload'
-color: 'blue'
+description: 'GitHub action that will help deploy your app to the your main repository for GitHub pages'
+branding:
+  icon: 'download'
+  color: 'yellow'
 inputs:
-  AUTHOR:  # id of input
+  AUTHOR:
     description: 'Author'
     required: true
   GITHUB_PAGE_NAME:
-    description: 'Name of Github page repository'
+    description: 'Name of GitHub page repository'
     required: true
   PA_TOKEN:
-    description: 'Github Personal Access Token'
+    description: 'GitHub Personal Access Token'
     required: true
   BUILD_PATH:
     description: 'Name of build directory'
@@ -24,9 +25,6 @@ inputs:
     description: 'Who to greet'
     required: false
     default: '${GITHUB_ACTOR}@users.noreply.github.com'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
