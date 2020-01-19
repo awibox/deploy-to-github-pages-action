@@ -1,5 +1,3 @@
-![Deploy your app to GitHub Pages](https://repository-images.githubusercontent.com/234867128/ea82a980-3ad8-11ea-9946-c8d55e816f1a)
-
 ## Description
 You can use GitHub Pages like hosting for your project. To do this, you need to create a repository with the name ```yourUsername.github.io``` (GitHub Pages repo).
 This action will help you set up automatic deployment from your app to another repository (GitHub Pages repo).
