@@ -1,9 +1,9 @@
 FROM alpine:3.10
 
 LABEL "com.github.actions.name"="Deploy your app to GitHub Pages"
-LABEL "com.github.actions.description"="Deployment build files to your main repository for Github Pages"
-LABEL "com.github.actions.icon"="upload"
-LABEL "com.github.actions.color"="blue"
+LABEL "com.github.actions.description"="GitHub action that will help deploy your app to the your main repository for GitHub pages"
+LABEL "com.github.actions.icon"="download"
+LABEL "com.github.actions.color"="yellow"
 
 LABEL "repository"="https://github.com/awibox/deploy-to-github-pages-action"
 LABEL "homepage"="https://github.com/awibox/deploy-to-github-pages-action#readme"
