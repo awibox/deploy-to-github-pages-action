@@ -8,15 +8,10 @@ if [[ -z "$BUILD_PATH" ]]; then
 fi
 
 if [[ -e $BUILD_PATH ]]; then
-  echo "$BUILD_PATH was found"
+  echo "$BUILD_PATH is correct"
 else
-  echo "$BUILD_PATH not founded. You should run build"
-fi
-
-if [[ -e '$BUILD_PATH' ]]; then
-  echo "BUILD_PATH was found"
-else
-  echo "BUILD_PATH not founded. You should run build"
+  echo "$BUILD_PATH not founded. You should run build (npm run build) or change build path name."
+  exit 1
 fi
 
 if [[ -z "$AUTHOR" ]]; then
@@ -48,10 +43,10 @@ if [ "$?" -ne 0 ]; then
 fi
 
 mkdir -p ${GITHUB_PAGE_NAME} || exit "$?"
-cp -rf ${BASE_PATH}/${BUILD_PATH}/ ${GITHUB_PAGE_NAME} || exit "$?"
+cp -rf ${BASE_PATH}/${BUILD_PATH}/. ${GITHUB_PAGE_NAME} || exit "$?"
 cd ${GITHUB_PAGE_NAME} || exit "$?"
 
-COMMIT_MESSAGE="${GITHUB_WORKFLOW} ${GITHUB_ACTION} from \"${GITHUB_REPOSITORY}\""
+COMMIT_MESSAGE="${GITHUB_WORKFLOW}. Commit ${GITHUB_SHA} from \"${GITHUB_REPOSITORY}\""
 
 if [ -z "$(git status --porcelain)" ]; then
     echo "No changes detected "
