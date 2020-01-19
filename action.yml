@@ -1,5 +1,5 @@
 # action.yml
-name: 'Deploy to Github Pages'
+name: 'Deploy your app to GitHub Pages'
 description: 'Deployment build files to your main repository for Github Pages'
 inputs:
   AUTHOR:  # id of input
