@@ -34,7 +34,7 @@ GITHUB_PAGE_NAME="${GITHUB_PAGE_NAME}"
 git config --global user.name "${USERNAME}"
 git config --global user.email "${EMAIL}"
 
-git clone --branch ${BRANCH} --single-branch --depth 1 https://${GH_PAT}@github.com/${REPOSITORY}.git
+git clone --branch ${BRANCH} --single-branch --depth 1 https://${PA_TOKEN}@github.com/${REPOSITORY}.git
 if [ "$?" -ne 0 ]; then
     echo >&2 "Cloning '$REPOSITORY' failed"
     exit 1
