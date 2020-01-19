@@ -1,0 +1,37 @@
+# action.yml
+name: 'Deploy to Github Pages'
+description: 'Deployment build files to your main repository for Github Pages'
+inputs:
+  AUTHOR:  # id of input
+    description: 'Author'
+    required: true
+  GITHUB_PAGE_NAME:
+    description: 'Name of Github page repository'
+    required: true
+  PA_TOKEN:
+    description: 'Github Personal Access Token'
+    required: true
+  BUILD_PATH:
+    description: 'Name of build directory'
+    required: true
+  USERNAME:
+    description: 'Who to greet'
+    required: false
+    default: '${GITHUB_ACTOR}'
+  EMAIL:
+    description: 'Who to greet'
+    required: false
+    default: '${GITHUB_ACTOR}@users.noreply.github.com'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.AUTHOR }}
+    - ${{ inputs.GITHUB_PAGE_NAME }}
+    - ${{ inputs.PA_TOKEN }}
+    - ${{ inputs.BUILD_PATH }}
+    - ${{ inputs.USERNAME }}
+    - ${{ inputs.EMAIL }}
