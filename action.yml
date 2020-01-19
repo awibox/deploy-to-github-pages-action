@@ -1,6 +1,6 @@
 # action.yml
 name: 'Deploy your app to GitHub Pages'
-description: 'GitHub action that will help deploy your app to the your main repository for GitHub pages'
+description: 'GitHub action that will help deploy your app to the main repository for GitHub pages'
 branding:
   icon: 'download'
   color: 'yellow'
