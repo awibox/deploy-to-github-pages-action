@@ -1,7 +1,7 @@
 FROM alpine:3.10
 
 LABEL "com.github.actions.name"="Deploy your app to GitHub Pages"
-LABEL "com.github.actions.description"="GitHub action that will help deploy your app to the main repository for GitHub pages"
+LABEL "com.github.actions.description"="GitHub action that will help deploy your app to the repository for GitHub Pages"
 LABEL "com.github.actions.icon"="download"
 LABEL "com.github.actions.color"="yellow"
 
