@@ -28,7 +28,7 @@ jobs:
         env:
           CI: true
       - name: Deploy to production
-        uses: awibox/deploy-to-github-pages-action@1.1.2
+        uses: awibox/deploy-to-github-pages-action@master
         env:
           AUTHOR: awibox
           BUILD_PATH: public
