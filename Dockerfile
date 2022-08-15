@@ -7,8 +7,8 @@ LABEL "com.github.actions.color"="yellow"
 
 LABEL "repository"="https://github.com/awibox/deploy-to-github-pages-action"
 LABEL "homepage"="https://github.com/awibox/deploy-to-github-pages-action#readme"
-LABEL "maintainer"="Andrei Arkhipov <andrei@awb.pw>"
-LABEL "version"="1.1.1"
+LABEL "maintainer"="Andrei Arkhipov <1931010+awibox@users.noreply.github.com>"
+LABEL "version"="1.1.2"
 
 RUN apk add --no-cache git
 
