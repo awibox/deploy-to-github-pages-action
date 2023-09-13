@@ -10,7 +10,7 @@ fi
 if [[ -e $BUILD_PATH ]]; then
   echo "$BUILD_PATH is correct"
 else
-  echo "$BUILD_PATH not founded. You should run build (npm run build) or change build path name."
+  echo "$BUILD_PATH not found. You should run build (e.g.:npm run build) or change the build path name."
   exit 1
 fi
 
@@ -49,7 +49,7 @@ cd ${GITHUB_PAGE_NAME} || exit "$?"
 COMMIT_MESSAGE="${GITHUB_WORKFLOW}. Commit ${GITHUB_SHA} from \"${GITHUB_REPOSITORY}\""
 
 if [ -z "$(git status --porcelain)" ]; then
-    echo "No changes detected "
+    echo "No changes detected"
 else
     git add -A
     git commit --message "${COMMIT_MESSAGE}"
